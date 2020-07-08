@@ -21,7 +21,7 @@ export default {
       // return x ** y % this.modulo;
 
       // Calculate x ** y manually, with a loop.
-      // This way we can take the result modulo this.module after each multiplication,
+      // This way we can take the result modulo this.modulo after each multiplication
       // which avoids using big numbers and getting wrong answers.
       // We could do the same with the faster algorithm from the previous exercise.
       let res = 1;
