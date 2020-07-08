@@ -18,7 +18,15 @@ export default {
   methods: {
     getValue(x, y) {
       // return (x * y) % this.modulo;
-      return x ** y % this.modulo;
+      // return x ** y % this.modulo;
+
+      // Calculate x ** y manually, with a loop.
+      // This way we can take the result modulo this.module after each multiplication,
+      // which avoids using big numbers and getting wrong answers.
+      // We could do the same with the faster algorithm from the previous exercise.
+      let res = 1;
+      for (let i=0; i<y; i++) res = (res * x) % this.modulo;
+      return res;
     },
     highlight(x, y) {
       return {
